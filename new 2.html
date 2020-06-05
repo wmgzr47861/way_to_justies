@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+<h2>My Customers</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="enter the city.." title="Type in a name">
+
+<table id="myTable">
+ 
+  
+
+
+
+<tr>
+<td>Advocate Name : Boomi Raja.C<br>
+Gender:Male<br>
+Experience:6 years<br>
+Languages:Tamil,English<br>
+District:Theni<br>
+Education:M.A.,B.L.,<br>
+specialization:Criminal,Civil<br>
+Location:
+<a href="https://www.google.com/maps?rlz=1C1CHBF_enIN837IN837&q=allinagaram+theni+in&um=1&ie=UTF-8&sa=X&ved=2ahUKEwiOvI6mqMbnAhVTzDgGHfIpCfAQ_AUoAXoECBUQAw">click here</a>
+<br>
+fees :10,000-15,000<br>
+
+No of Success case/No of Failure case:12-02<br>
+</td>
+<td><a href="book.html"><button><h2>Appointment</h2></button></a><br><br><img src="law2.jpg" height="150" width="150"></td>
+</tr>
+<tr>
+<td>
+Name : Asaithambi<br>
+Gender : Male<br>
+Experience : 12 years<br>
+Education : B.B.E,B.L.<br>
+Languages Known : Tamil,English<br>
+District:Theni<br>
+Practice Courts : Theni district courts<br>
+Specialization : Criminal & civil<br>
+<td><a href="book.html"><button><h2>Appointment</h2></button></a><br><br><img src="asai.jpg" height="150" width="150"></td>
+</td>
+</tr>
+<tr>
+<td>
+Name : Balaganesan.b<br>
+Gender : Male<br>
+Experience : 4 years<br>
+Education : BA.,BL.,<br>
+Languages Known : Tamil and english<br>
+Practice Courts : Theni disdist court<br>
+Specialization : Civil,criminal and document drafting<br>
+<td><a href="book.html"><button><h2>Appointment</h2></button></a><br><br><img src="balag.jpg" height="150" width="150"></td>
+</td>
+</tr>
+<tr>
+<td>
+Name : Johnson Thangiah <br>
+Gender : Male<br>
+Website : www.mysite.com<br>
+Experience : 17 years<br>
+Education : Bsc,MA,BL.<br>
+Languages Known : Tamil and English<br>
+districts :Tirunelveli<br>
+Practice Courts : SESSIONS COURTS / TRIAL ADVOCATE/ Cell. 09443194559 Economic Offences -Taxation.<br>
+Specialization : CIVIL,CRIMINAL,Consumer Act,138-of-NI-Act,FAMILY LAW,CUSTOMS TAX ,FEMA,PMLA-2002,NDPS,IPR Act.<br>
+</td>
+<td><a href="book.html"><button><h2>Appointment</h2></button></a><br><br><img src="john.jpg" height="150" width="150"></td>
+</tr>
+<tr>
+<td>
+Name : Balasundar.k<br>
+Gender : Male<br>
+Experience : 24 years<br>
+Education : B.A.,B.L.,<br>
+Languages Known : Tamil, English<br>
+District:tirunelveli<br>
+Practice Courts : District munsif cum Judicial magistrate court, Nanguneri<br>
+Specialization : Criminal, Civil<br>
+</td>
+<td><a href="book.html"><button><h2>Appointment</h2></button></a><br><br><img src="bala.jpg" height="150" width="150"></td>
+</tr>
+</table>
+
+
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+</body>
+</html>

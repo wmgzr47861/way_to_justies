@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+<h2>Client </h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for client Adhaar No.." title="Type in a name">
+
+<table id="myTable" >
+  <tr class="header">
+    <th style="width:60%;">Adhaar No</th>
+    <th style="width:40%;">FIR No</th>
+  </tr>
+  <tr>
+    <td>2147 7222 8999</td>
+    <td>101</td>
+  </tr>
+  <tr>
+    <td>3455 8767 8778</td>
+    <td>102</td>
+  </tr>
+  <tr>
+    <td>9098 8765 3454</td>
+    <td>101</td>
+  </tr>
+  <tr>
+    <td>7666 7634 7656</td>
+    <td>104</td>
+  </tr>
+  <tr>
+    <td>3455 8767 87783</td>
+    <td>105</td>
+  </tr>
+  <tr>
+    <td>7666 7634 7656</td>
+    <td>108</td>
+  </tr>
+  <tr>
+    <td>3455 8767 87783</td>
+    <td>110</td>
+  </tr>
+  <tr>
+    <td>7666 7634 7656</td>
+    <td>120</td>
+  </tr>
+</table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  var rowCount = 0;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+		
+		
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+	
+  }
+       
+  
+}
+</script>
+<input type="button" id="btnGetCount" value="Count Rows" onclick = "CountRows()" />
+<script type="text/javascript">
+    function CountRows() {
+        var totalRowCount = 0;
+        var rowCount = 0;
+        var table = document.getElementById("myTable");
+		var ip = document.getElementById("myInput");
+        var rows = table.getElementsByTagName("tr")
+        for (var i = 0; i < rows.length; i++) {
+            totalRowCount++;
+            if (rows[i].getElementsByTagName("td")[0] == ip) {
+                rowCount++;
+            }
+        }
+        var message = "Total Row Count: " + totalRowCount;
+        message += "\nRow Count: " + rowCount;
+        alert(message);
+    }
+</script>
+  <script> 
+        function gfg() { 
+            var r = document.getElementsByTagName("td"); 
+            document.getElementById("count").innerHTML = 
+              (r.match(document.getElementById("myInput"))).length; 
+			  
+  
+        } 
+    </script>
+	<p id="count"></p>
+	  <button onClick="gfg()"> 
+        count 
+    </button
+
+</body>
+</html>

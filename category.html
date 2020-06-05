@@ -1,0 +1,115 @@
+<html> 
+<head> 
+<script> 
+function VALIDATE()								 
+{ 
+	var name = document.forms["RegForm"]["Name"];			 
+	
+
+	if (name.value == "")								 
+	{ 
+		window.alert("Please enter your problem."); 
+		name.focus(); 
+		return false; 
+	} 
+	if (name.value>= 0)								 
+	{ 
+		window.alert("Please enter valid problem."); 
+		name.focus(); 
+		return false; 
+	} 
+	if (name.value == "rent"|| name.value == "divorce" || name.value =="marriage" || name.value =="adoption" || name.value ==" child custody")								 
+	{ 
+		window.alert("It is coming under family law."); 
+		name.focus(); 
+		return false; 
+	} 
+	if (name.value == "asset" || name.value ==" property" || name.value == "land" || name.value ==" jewels" || name.value == "field")								 
+	{ 
+		window.alert("It is coming under propertyy law."); 
+		name.focus(); 
+		return false; 
+	} 
+	if (name.value == "agreement" || name.value =="parties" || name.value =="lease" || name.value ==" apartment" || name.value =="landlord")								 
+	{ 
+		window.alert("It is coming under contract law."); 
+		name.focus(); 
+		return false; 
+	} 
+	if (name.value == "Duty "|| name.value =="causation" || name.value ==" Damages" || name.value ==" assault" || name.value == "intentional tort")								 
+	{ 
+		window.alert("It is coming under tort law."); 
+		name.focus(); 
+		return false; 
+	} 
+	else
+	window.alert("no record found");
+	name.focus();
+	return false;
+}</script> 
+
+<style> 
+VALIDATE {										 
+	margin-left: 70px; 
+	font-weight: bold ; 
+	float: left; 
+	clear: left; 
+	width: 100px; 
+	text-align: left; 
+	margin-right: 10px; 
+	font-family:sans-serif,bold, Arial, Helvetica; 
+	font-size:14px; 
+} 
+
+div {
+    background-image:url("download.jpg"); 
+	box-sizing: border-box; 
+	width: 100%; 
+	border: 100px solid black; 
+	float: left; 
+	align-content: center; 
+	align-items: center; 
+} 
+
+form {										 
+	margin: 0 auto; 
+	width: 600px; 
+}
+[type="text"] {color: #111;}
+[type="password"] {color: #111;}
+.btn--form {
+  padding: .5rem 2.5rem;
+  font-size: .95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  background: #111;
+  border-radius: remy(35px);
+  &:focus,
+  &:hover {background: lighten(#111, 13%);}
+}
+.class1{
+  padding: .5rem 2.5rem;
+  font-size: .95rem;
+  font-weight: 600;
+  text-transform: lowercase;
+   border-radius: remy(35px);
+  
+  }</style></head> 
+
+<body style=background-color:("download.jpg")>; 
+
+<h1 style="text-align: center"> SEARCH</h1>		 
+<form name="RegForm" action="/submit.php" onsubmit="return VALIDATE()" method="post"> 
+	
+	<h2>ENTER THE PROBLEM:<h2><input class="class1" type="text" placeholder="Enter the problem" size=65 name="Name"> </p><br>	 
+	<p><input class="btn--form" type="submit" value="send" name="Submit">	 
+		<input class="btn--form" type="reset" value="Reset" name="Reset"> 
+	</p><br>
+<br>	
+</form>
+
+</body> 
+</html> 
+
+

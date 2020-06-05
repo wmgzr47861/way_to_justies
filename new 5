@@ -1,0 +1,4 @@
+$no_ofcase=$_POST['tc'];
+$no_of_failcase=$_POST['fc'];
+$no_of_passcase=$_POST['pc'];
+$adhaar_number=$_POST['ac'];

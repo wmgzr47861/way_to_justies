@@ -1,0 +1,73 @@
+<html>
+<head>
+<script>
+function validateForm() {
+    var a = document.forms["myForm"]["q1"].value;
+    if (a =="") {
+        alert("client name must be filled out");
+        return false;
+    }
+   /* var z = document.forms["myForm"]["q9"].value;
+    if(z ==""){
+    alert("Enter client age");
+    return false;
+    }
+	
+var b = document.forms["myForm"]["q4"].value;
+    if(b==""){
+    alert("Enter the from address");
+    return false;
+    }
+	var s = document.forms["myForm"]["q5"].value;
+    if(s==""){
+    alert("Enter the to address");
+    return false;
+    }
+	var d = document.forms["myForm"]["q6"].value;
+    if(d==""){
+    alert("Enter the timing");
+    return false;
+    }
+	var u = document.forms["myForm"]["q7"].value;
+    if(u==""){
+    alert("Enter the date of journey");
+    return false;
+    }
+	var w = document.forms["myForm"]["q8"].value;
+    if(w==""){
+    alert("Please enter the valid details");
+    return false;
+    }
+	*/
+}
+
+</script>
+<script>
+function confirm(){
+alert("confirm the booking");
+}
+
+</script>
+</head>
+<body>
+<center>
+<form name="myForm"  onsubmit=" validateForm()" action="user.html" method="post">
+<font color="orange" bgcolor="blue"><h1>BOOKING LAWYER</H1></font>
+
+
+<p>Client  Name:<input type="text" name="q1" placeholder="enter your name"></p>
+
+<p>Client Age:<input type="text" name="q9" pattern="\d{2}" placeholder="enter your age"></p>
+<p>Sex: <select><option>Female</option><option>Male</option></select></p>
+<p>Client  District:<input type="text" name="q1" placeholder="enter your district"></p>
+<p>Number of cases already there:<input type="text" name="q1" placeholder="enter the number"></p>
+<p>problem Type: <select><option>Rent</option><option>murder</option><option>Criminal</option><option>Civil</option></select></p>
+<p>Address:<textarea id="w3mission" rows="4" cols="50">
+
+</textarea></p>
+
+<Button onClick="confirm()">confirm</Button>
+<Button >Book Appoinment</Button>
+
+</form>
+</center></body></html>
